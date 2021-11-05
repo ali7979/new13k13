@@ -1,0 +1,224 @@
+-- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+--
+-- Host: localhost    Database: 13k13
+-- ------------------------------------------------------
+-- Server version	8.0.26
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `comment`
+--
+
+DROP TABLE IF EXISTS `comment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `comment` (
+  `user_id` varchar(50) DEFAULT NULL,
+  `video_id` int DEFAULT NULL,
+  `text` varchar(200) DEFAULT NULL,
+  KEY `user_gmail` (`user_id`),
+  KEY `video_id` (`video_id`),
+  CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`video_id`) REFERENCES `video` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comment`
+--
+
+LOCK TABLES `comment` WRITE;
+/*!40000 ALTER TABLE `comment` DISABLE KEYS */;
+INSERT INTO `comment` VALUES ('564545831575663',89,'cc'),('564545831575663',89,'hola'),('564545831575663',89,'siniorita');
+/*!40000 ALTER TABLE `comment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `follow`
+--
+
+DROP TABLE IF EXISTS `follow`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `follow` (
+  `follower_id` varchar(50) DEFAULT NULL,
+  `user_id` varchar(50) DEFAULT NULL,
+  KEY `user_gmail` (`user_id`),
+  KEY `follower_gmail` (`follower_id`),
+  CONSTRAINT `follow_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `follow_ibfk_2` FOREIGN KEY (`follower_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `follow`
+--
+
+LOCK TABLES `follow` WRITE;
+/*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+/*!40000 ALTER TABLE `follow` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `likes`
+--
+
+DROP TABLE IF EXISTS `likes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `likes` (
+  `user_id` varchar(50) DEFAULT NULL,
+  `video_id` int DEFAULT NULL,
+  KEY `user_gmail` (`user_id`),
+  KEY `video_id` (`video_id`),
+  CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`video_id`) REFERENCES `video` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `likes`
+--
+
+LOCK TABLES `likes` WRITE;
+/*!40000 ALTER TABLE `likes` DISABLE KEYS */;
+INSERT INTO `likes` VALUES ('564545831575663',89);
+/*!40000 ALTER TABLE `likes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shares`
+--
+
+DROP TABLE IF EXISTS `shares`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `shares` (
+  `user_id` varchar(50) DEFAULT NULL,
+  `video_id` int DEFAULT NULL,
+  `target_user_id` varchar(20) DEFAULT NULL,
+  KEY `user_gmail` (`user_id`),
+  KEY `video_id` (`video_id`),
+  KEY `target_user_gmail` (`target_user_id`),
+  CONSTRAINT `shares_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `shares_ibfk_2` FOREIGN KEY (`video_id`) REFERENCES `video` (`id`),
+  CONSTRAINT `shares_ibfk_3` FOREIGN KEY (`target_user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shares`
+--
+
+LOCK TABLES `shares` WRITE;
+/*!40000 ALTER TABLE `shares` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shares` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `name` varchar(20) DEFAULT NULL,
+  `tel` varchar(20) DEFAULT NULL,
+  `id` varchar(100) NOT NULL,
+  `birth_date` date DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `picture` varchar(1000) DEFAULT NULL,
+  `bio` varchar(300) DEFAULT NULL,
+  `gmail` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('Houria Alalaoui',NULL,'564545831575663',NULL,NULL,'/user_images/564545831575663.jpg',NULL,NULL);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `video`
+--
+
+DROP TABLE IF EXISTS `video`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `video` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(20) DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `user_id` varchar(50) DEFAULT NULL,
+  `video_link` varchar(50) DEFAULT NULL,
+  `visibility` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_gmail` (`user_id`),
+  CONSTRAINT `video_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `video`
+--
+
+LOCK TABLES `video` WRITE;
+/*!40000 ALTER TABLE `video` DISABLE KEYS */;
+INSERT INTO `video` VALUES (89,'cc','cc','564545831575663','../front-end/public/video/video_1628011760043.mp4','Friends');
+/*!40000 ALTER TABLE `video` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `views`
+--
+
+DROP TABLE IF EXISTS `views`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `views` (
+  `user_id` varchar(50) DEFAULT NULL,
+  `video_id` int DEFAULT NULL,
+  KEY `user_gmail` (`user_id`),
+  KEY `video_id` (`video_id`),
+  CONSTRAINT `views_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  CONSTRAINT `views_ibfk_2` FOREIGN KEY (`video_id`) REFERENCES `video` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `views`
+--
+
+LOCK TABLES `views` WRITE;
+/*!40000 ALTER TABLE `views` DISABLE KEYS */;
+INSERT INTO `views` VALUES ('564545831575663',89);
+/*!40000 ALTER TABLE `views` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-08-03 21:03:28

@@ -1,0 +1,19 @@
+{
+  "name": "13k18.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahajkedia/13k18.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahajkedia/13k18.com/issues"
+  },
+  "homepage": "https://github.com/sahajkedia/13k18.com#readme"
+}

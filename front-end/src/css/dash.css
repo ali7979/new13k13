@@ -1,0 +1,425 @@
+html{
+    background-color: rgba(42,42,42,255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.alll{
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    
+}
+
+.head{
+    background-color: khaki;
+    width: 100%;
+    height:12vh;
+}
+
+.left,.right{
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    
+    width:40vh;
+    
+   
+}
+.right{
+    width:40vh;
+    
+    
+}
+
+.element{
+    color: #dba607;
+    background-color: #363636    ;
+    min-height: 15vh;
+    margin-top: 7px;
+    border-radius: 20px;
+}
+
+.main{
+    
+    width: 65%;
+margin-top: -2rem;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.post,.displayer{
+    background-color: #363636 ; 
+  
+   
+    min-height: 5vh;
+    /* margin: 3%; */
+    margin: 2.6rem 3rem;
+    border-radius: 20px;
+  
+    
+   
+}
+.post{
+    height: 7rem;
+}
+
+.displayer{
+    margin-top: -4vh;
+    height: 57%;
+}
+.ele1{
+    height: 60vh;
+    background-color: #363636;   
+}
+.center{
+    justify-content: center;
+    text-align: center;
+    margin: 5%;
+}
+.ele1 img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+   margin-bottom: -1rem;
+   border:3px solid rgb(255, 252, 252);
+
+}
+.post img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+   margin-top: 1.2rem ;
+   
+
+}
+
+
+.ele1 p{
+    text-align: center;
+    width: 60%;
+    font-size: 0.8rem;
+    margin: -0.8rem 3rem;
+    justify-content: center;
+    color: #8f8e8e;
+}
+.ele2{
+    height: 17rem;
+    
+}
+.ele3{
+    height: 15rem;
+   
+}
+.ele4{
+    height: 20rem;
+}
+.ele5{
+    height: 30rem;
+}
+
+.ele6{
+    height: 16rem;
+
+}
+.lil{
+    max-width: 40px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+    width: 90%;
+    color: white;
+    display:inline-block;
+}
+.lil p{
+    font-size: 10px;
+    text-align: center;
+    margin: 0rem 0;
+    
+   
+}
+ul {
+    list-style-type: none;
+    margin-left: -1rem;
+    
+}
+li{
+   margin: 1rem 0; 
+   
+}
+.list{
+    color: white;
+    font-size: 1rem;
+   
+}
+a{
+    color: white;
+    
+}
+.las{
+    font-size: 1rem;
+}
+.makepost{
+    background-color: rgba(42,42,42,255);
+    /* width: 30%; */
+    justify-content: space-between;
+    align-items: center;
+   width: 30%;
+    border-radius: 30px;
+    border: none;
+    height: 2rem;
+    align-self: center;
+    margin: 1.5rem 0.8rem;
+    position: absolute;
+
+}
+.tt{
+    text-align: center;
+    margin-top: 0.9rem;
+}
+h1{
+    text-align: center;
+    font-size: 1.8rem;
+    
+}
+.ta{
+    margin-right: 2rem;
+    
+}
+.people img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 2rem;
+   margin-top: 0.5rem ;
+   border:2px solid rgb(255, 255, 255);
+   
+}
+.people{
+justify-content: center;
+}
+.names{
+    position: absolute;
+    margin-top:1rem;
+    margin-left: -0.9rem;
+    color: white;
+   width: 11rem;
+}
+.fa-circle{
+  
+    float: right;
+    font-size: 10px;
+}
+.fa-bell,.fa-bell-slash{
+    float:right;
+}
+.fa-bell-slash{
+    color: grey;
+}
+
+
+.displayer img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 1rem;
+  
+}
+.postt{
+    margin-left: 0.2rem;
+    margin-top:1.2rem;
+    width: 45%;
+}
+
+.fa-ellipsis-h{
+  
+    float: right;
+    margin: 1rem 2rem;
+    font-size: 2rem;
+}
+.imgpost{
+    justify-content: center;
+    text-align: center;
+}
+.imgpost img{
+    width:35rem;
+    height: 20rem;
+    border-radius: 10px;
+    
+}
+.sett{
+    color:#dba607 ;
+    text-align: center;
+}
+.ico{
+margin:0  2rem;
+}
+
+.lorem{
+    width: 70%;
+   
+    height: 20rem;
+    text-align: left;
+    justify-content: center;
+  
+    margin: 0 10rem;
+    margin-right: 15rem;
+}
+.comment{
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+.lorem img{
+    border: 3px solid white;
+}
+.comment input{
+    width: 25rem;
+    height: 1.7rem;
+    margin-left: 0;
+}
+.cn{
+   
+    margin: 0 0.5rem;
+    
+}
+.cnn{
+    margin-right: 4rem;
+     float: right;
+    margin-top: 2rem;
+    color: #dba607;
+}
+
+.im{
+    width: 4.8rem;
+    height: 4.5rem;
+    margin-right: 1.7rem;
+    border-radius: 2px;
+    
+}
+.img2{
+    margin: 1rem 0;
+    margin-left: 3.8rem;
+}
+.seall{
+    margin-top: 2rem;
+    text-align: center;
+    color: #dba607;
+}
+.sy{
+    margin-left: 1rem;
+    position: absolute;
+    margin-top: -0.5rem;
+    
+    
+}
+.bn{
+    right: 0;
+    position: absolute;
+    background-color: #e9b20e;
+    color: white;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 1.5rem;
+    border: none;
+    width: 5.2rem;
+    margin-left: 1rem;
+    
+}
+.p1{
+    margin-top: 1.3rem;
+}
+.fa-paper-plane:before {
+    
+    font-size: 1.3rem;
+    
+}
+
+
+
+.avatars {
+    display: flex;
+    list-style-type: none;
+   
+    justify-content: center;
+    padding: 0px;
+    flex-direction: row;
+}
+.avatars__item {
+    background-color: #596376;
+    border: 2px solid #f2f3f5;
+    border-radius: 100%;
+    color: #fff;
+    display: block;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition: margin 0.1s ease-in-out;
+    overflow: hidden;
+    margin-left: -25px;
+}
+.avatars__item:first-child {
+    z-index: 5;
+}
+.avatars__item:nth-child(2) {
+    z-index: 4;
+}
+.avatars__item:nth-child(3) {
+    z-index: 3;
+}
+.avatars__item:nth-child(4) {
+    z-index: 2;
+}
+.avatars__item:nth-child(5) {
+    z-index: 1;
+}
+.avatars__item:last-child {
+    z-index: 0;
+}
+.avatars__item img {
+    width: 100%;
+}
+.avatars:hover .avatars__item {
+    margin-right: 10px;
+}
+.f{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+.f p,.fp{
+
+color: rgb(199, 194, 194);
+font-size: 0.9rem;
+position: relative;
+left: 0.5rem;
+bottom: 0.4rem;
+font-family: Arial, Helvetica, sans-serif;
+}
+.fp{
+    color: white;
+    
+text-align: center;
+position: inherit;
+font-size: 11px;
+font-weight: 900;
+margin-top:-2rem}
+.last{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    margin: 1rem 4rem;
+}
+.last a{
+    color:#e9b20e;
+}
