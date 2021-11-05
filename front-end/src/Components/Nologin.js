@@ -149,7 +149,7 @@ export default function Nologin() {
 						</svg>
                 </div>
                 
-                <NavLink  to="/signin"><div id="Group_21">
+                <NavLink  to="/signup"><div id="Group_21">
 		<svg class="Rectangle_3">
 			<rect id="Rectangle_3" rx="23.5" ry="23.5" x="0" y="0" width="104" height="47">
 			</rect>
