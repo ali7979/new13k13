@@ -767,7 +767,7 @@ export default function Dashboard() {
 	</div>
 	<div id="Group_158">
 		<div id="The_perfect_time_for_uploading">
-			<span>The perfect time for uploading<br/>your new post </span><span style={{color:"rgba(204,153,0,1)",textDecoration:"underline"}}>Create new post</span>
+			<span>The perfect time for uploading<br/> your new post </span><span style={{color:"rgba(204,153,0,1)",textDecoration:"underline"}}>Create new post</span>
 		</div>
 	</div>
 	<svg class="Rectangle_61">
