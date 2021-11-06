@@ -18,7 +18,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Ellipse_7_bd from "../images/Ellipse_7.png"
 import React, { useEffect, useState } from 'react'
 import Ellipse_6_ei from "../images/Ellipse_6_ei.png"
-
+import Dashboard1 from "./Dashboard1";
+import Dashbrd from "./dshbrd";
 
 
 export default function Dashboard() {
@@ -39,6 +40,7 @@ export default function Dashboard() {
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(userDashboard(user_id,id))
+		console.log(userLogin)
     },[user_id])
     const HandleLoad = (id) => {
         let elt = document.getElementById(id+"");
@@ -48,12 +50,21 @@ export default function Dashboard() {
             }
         }
     }
-return (
+	// if(!userLogin)
+	// 	return(
+	// 		<>
+	// 		<Dashboard1 />
+	// 		</>
+	// 	)
+ return (
 
 	loading?(
 		<LoadingBox/>
 		):(
 <>
+{
+	userLogin.id?(
+		
 <div id="Web_1920__3">
 {userData[0]&&(
             <>
@@ -770,6 +781,12 @@ return (
 	</>)}
 
 </div>
+
+	):(
+		<Dashbrd />
+	)
+}
+
 
 
 
